@@ -29,6 +29,9 @@ namespace Calculator
 
         private void button_click(object sender, EventArgs e)
         {
+            if (textBox_Result.Text == "0")
+                textBox_Result.Clear();
+
             Button button = (Button)sender;
             textBox_Result.Text = textBox_Result.Text + button.Text;
         }
