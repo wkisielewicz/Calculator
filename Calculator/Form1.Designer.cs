@@ -46,7 +46,7 @@
             this.button17 = new System.Windows.Forms.Button();
             this.button18 = new System.Windows.Forms.Button();
             this.button20 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox_Result = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -175,6 +175,7 @@
             this.button15.TabIndex = 10;
             this.button15.Text = "1";
             this.button15.UseVisualStyleBackColor = true;
+            this.button15.Click += new System.EventHandler(this.button_click);
             // 
             // button16
             // 
@@ -212,13 +213,15 @@
             this.button20.Text = "0";
             this.button20.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // textBox_Result
             // 
-            this.textBox1.Location = new System.Drawing.Point(19, 65);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(406, 22);
-            this.textBox1.TabIndex = 20;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox_Result.Location = new System.Drawing.Point(19, 65);
+            this.textBox_Result.Name = "textBox_Result";
+            this.textBox_Result.Size = new System.Drawing.Size(406, 22);
+            this.textBox_Result.TabIndex = 20;
+            this.textBox_Result.Text = "0";
+            this.textBox_Result.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textBox_Result.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label1
             // 
@@ -237,7 +240,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(445, 402);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBox_Result);
             this.Controls.Add(this.button16);
             this.Controls.Add(this.button17);
             this.Controls.Add(this.button18);
@@ -283,7 +286,7 @@
         private System.Windows.Forms.Button button17;
         private System.Windows.Forms.Button button18;
         private System.Windows.Forms.Button button20;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox_Result;
         private System.Windows.Forms.Label label1;
     }
 }

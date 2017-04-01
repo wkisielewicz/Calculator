@@ -26,5 +26,10 @@ namespace Calculator
         {
 
         }
+
+        private void button_click(object sender, EventArgs e)
+        {
+            textBox_Result.Text = textBox_Result.Text + "1";
+        }
     }
 }
