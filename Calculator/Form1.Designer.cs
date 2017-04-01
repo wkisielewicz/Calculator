@@ -88,6 +88,7 @@
             this.button4.TabIndex = 3;
             this.button4.Text = "/";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.operator_click);
             // 
             // button5
             // 
@@ -115,6 +116,7 @@
             this.button7.TabIndex = 8;
             this.button7.Text = "*";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.operator_click);
             // 
             // button8
             // 
@@ -154,6 +156,7 @@
             this.button12.TabIndex = 13;
             this.button12.Text = "-";
             this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.operator_click);
             // 
             // button13
             // 
@@ -202,6 +205,7 @@
             this.button17.TabIndex = 18;
             this.button17.Text = "+";
             this.button17.UseVisualStyleBackColor = true;
+            this.button17.Click += new System.EventHandler(this.operator_click);
             // 
             // button18
             // 
