@@ -244,6 +244,7 @@
             // 
             this.labelCurrentOperation.AutoSize = true;
             this.labelCurrentOperation.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelCurrentOperation.ForeColor = System.Drawing.SystemColors.ButtonShadow;
             this.labelCurrentOperation.Location = new System.Drawing.Point(17, 24);
             this.labelCurrentOperation.Name = "labelCurrentOperation";
             this.labelCurrentOperation.Size = new System.Drawing.Size(0, 29);
