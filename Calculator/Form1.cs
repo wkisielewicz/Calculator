@@ -47,5 +47,10 @@ namespace Calculator
             resultValue = Double.Parse(textBox_Result.Text);
 
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            textBox_Result.Text = "0";
+        }
     }
 }
