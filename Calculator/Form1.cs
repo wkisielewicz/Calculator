@@ -55,11 +55,25 @@ namespace Calculator
         private void operator_click(object sender, EventArgs e)
         {
             Button button = (Button)sender;
-            isoperationPerformed = true;
-            operationPerformed = button.Text;
-            resultValue = Double.Parse(textBox_Result.Text);
-            labelCurrentOperation.Text = resultValue + " " + operationPerformed;
 
+            if (resultValue != 0)
+            {
+
+                button16.PerformClick();
+                isoperationPerformed = true;
+                operationPerformed = button.Text;
+                labelCurrentOperation.Text = resultValue + " " + operationPerformed;
+
+            }
+
+            else
+            {
+
+                isoperationPerformed = true;
+                operationPerformed = button.Text;
+                resultValue = Double.Parse(textBox_Result.Text);
+                labelCurrentOperation.Text = resultValue + " " + operationPerformed;
+            }
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -92,6 +106,8 @@ namespace Calculator
                 default:
                     break;
             }
+            resultValue = Double.Parse(textBox_Result.Text);
+            labelCurrentOperation.Text = " ";
         }
     }
 }
