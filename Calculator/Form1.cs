@@ -56,6 +56,12 @@ namespace Calculator
         private void button6_Click(object sender, EventArgs e)
         {
             textBox_Result.Text = "0";
+            resultValue = 0;
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
