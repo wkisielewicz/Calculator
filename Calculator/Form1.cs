@@ -52,5 +52,10 @@ namespace Calculator
         {
             textBox_Result.Text = "0";
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            textBox_Result.Text = "0";
+        }
     }
 }
