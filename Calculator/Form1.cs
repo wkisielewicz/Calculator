@@ -39,6 +39,16 @@ namespace Calculator
 
             isoperationPerformed = false;
             Button button = (Button)sender;
+
+            if(button.Text == ".")
+            {
+                if (!textBox_Result.Text.Contains("."))
+                {
+                    textBox_Result.Text = textBox_Result.Text + button.Text;
+                }
+            }
+            else
+
             textBox_Result.Text = textBox_Result.Text + button.Text;
         }
 
