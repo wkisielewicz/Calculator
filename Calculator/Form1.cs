@@ -15,6 +15,7 @@ namespace Calculator
 
         Double resultValue = 0;
         String operationPerformed = "";
+        bool isoperationPerformed = false;
 
         public Form1()
         {
@@ -33,9 +34,10 @@ namespace Calculator
 
         private void button_click(object sender, EventArgs e)
         {
-            if (textBox_Result.Text == "0")
+            if (textBox_Result.Text == "0" || (isoperationPerformed))
                 textBox_Result.Clear();
 
+            isoperationPerformed = false;
             Button button = (Button)sender;
             textBox_Result.Text = textBox_Result.Text + button.Text;
         }
@@ -43,8 +45,10 @@ namespace Calculator
         private void operator_click(object sender, EventArgs e)
         {
             Button button = (Button)sender;
+            isoperationPerformed = true;
             operationPerformed = button.Text;
             resultValue = Double.Parse(textBox_Result.Text);
+            labelCurrentOperation.Text = resultValue + " " + operationPerformed;
 
         }
 
@@ -61,7 +65,23 @@ namespace Calculator
 
         private void button16_Click(object sender, EventArgs e)
         {
-
+            switch(operationPerformed)
+            {
+                case "+":
+                    textBox_Result.Text = (resultValue + Double.Parse(textBox_Result.Text)).ToString();
+                    break;
+                case "-":
+                    textBox_Result.Text = (resultValue - Double.Parse(textBox_Result.Text)).ToString();
+                    break;
+                case "*":
+                    textBox_Result.Text = (resultValue * Double.Parse(textBox_Result.Text)).ToString();
+                    break;
+                case "/":
+                    textBox_Result.Text = (resultValue / Double.Parse(textBox_Result.Text)).ToString();
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }
